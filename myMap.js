@@ -3,16 +3,15 @@
 function myMap(array, callback) {
 
 //  CODE INSIDE HERE   //
-var new_array = [];
+var newArray = [];
 
 for (var i = 0; i < array.length; i++) {
-	callback (array[i], i, array);
-  	var newcall = callback;
-  	new_array.push(newcall);
+	
   	
+  	newArray.push(callback(array[i], i, array));
   }
   
-  return new_array;
+  return newArray;
   
 }
 
