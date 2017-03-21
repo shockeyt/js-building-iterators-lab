@@ -4,23 +4,8 @@
 function myReduce(array, callback) {
 
 //  CODE INSIDE HERE   //
-// var acc = "wut";
-// // var combine = acc + array;
-
-// for (let i = 0; i < array.length; i++) {
-  	
-//   	acc = callback(acc, array[i], i, array);
-  	
-//   }
-//   return acc;
-
-var acc = [];
+var acc = "wut";
 // var combine = acc + array;
-if (typeof i === undefined) {
-	return array;
-}
-else (typeof i !== undefined); {
-
 
 for (let i = 0; i < array.length; i++) {
   	
@@ -28,7 +13,22 @@ for (let i = 0; i < array.length; i++) {
   	
   }
   return acc;
-}
+
+// let acc = [];
+// // var combine = acc + array;
+// if (typeof i === undefined) {
+// 	return array;
+// }
+// else {
+// 	i = array[i];
+// }
+// for (let i = 0; i < array.length; i++) {
+  	
+//   	acc = callback(acc, array[i], i, array);
+  	
+//   }
+//   return acc;
+
 
 // function (
 // 	accumulator,
