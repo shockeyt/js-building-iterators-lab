@@ -1,19 +1,37 @@
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce for more details
 // Don't worry about initialValue at first. You can always add it in later.
 
-function myReduce(array, callback) {
+function myReduce(array, callback, initialValue) {
 
 //  CODE INSIDE HERE   //
-var acc = "wut";
+if (initialValue === typeof('string')) {
+	initialValue = j;
+} 
+else if (initialValue === ('number')) {
+	initialValue = j;
+}
+else if (initialValue === undefined){
+	initialValue = array[0];
+}
+	
+
+
+var acc = initialValue;
 // var combine = acc + array;
 
-for (let i = 0; i < array.length; i++) {
+for (var i = 0; i < array.length; i++) {
   	
-  	acc = callback(acc, array[i], i, array);
+  	callback(acc, array[i], i, array);
   	
   }
   return acc;
 
+
+
+// var sum = [0, 1, 2, 3].reduce(function(acc, val) { return acc + val;
+// }, 0);
+
+// console.log(sum);
 // let acc = [];
 // // var combine = acc + array;
 // if (typeof i === undefined) {
