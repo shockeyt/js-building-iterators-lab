@@ -4,15 +4,15 @@
 function myReduce(array, callback, initialValue) {
 
 //  CODE INSIDE HERE   //
-if (initialValue === typeof('string')) {
-	initialValue = j;
-} 
-else if (initialValue === ('number')) {
-	initialValue = j;
-}
-else if (initialValue === undefined){
-	initialValue = array[0];
-}
+// if (initialValue === typeof('string')) {
+// 	initialValue = j;
+// } 
+// else if (initialValue === typeof('number')) {
+// 	initialValue = j;
+// }
+// else if (initialValue === undefined){
+// 	initialValue = array[0];
+// }
 	
 
 
@@ -20,9 +20,10 @@ var acc = initialValue;
 // var combine = acc + array;
 
 for (var i = 0; i < array.length; i++) {
-  	
-  	callback(acc, array[i], i, array);
-  	
+  	console.log(i);
+  	// callback(acc, array[i], i, array);
+  	var current = callback(acc, array[i], i, array);
+  	acc = current;
   }
   return acc;
 
