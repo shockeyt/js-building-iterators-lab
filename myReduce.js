@@ -26,6 +26,9 @@ if (!initialValue){
 // }
 
 for (var i = 0; i < array.length; i++) {
+	if(i === 0 && !initialValue){
+		i++;
+	}
   	console.log(i);
   	// callback(acc, array[i], i, array);
   	acc = callback(acc, array[i], i , array);
