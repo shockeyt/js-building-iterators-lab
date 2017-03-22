@@ -4,30 +4,38 @@
 function myReduce(array, callback, initialValue) {
 
 //  CODE INSIDE HERE   //
-// if (initialValue === typeof('string')) {
-// 	initialValue = j;
-// } 
-// else if (initialValue === typeof('number')) {
-// 	initialValue = j;
-// }
-// else if (initialValue === undefined){
-// 	initialValue = array[0];
-// }
-	
+
 
 
 var acc = initialValue;
-// var combine = acc + array;
+var current = array[0];
+// IF/ELSE STATEMENT
+
+if (!initialValue){
+	acc = array[0];
+	current = array[1];
+}
+// if (initialValue === typeof('string')) {
+// 	acc = initialValue;
+// }
+// else if (initialValue === typeof('number')) {
+// 	acc = initialValue;
+// }
+// else {
+// 	acc = array[0];
+// }
 
 for (var i = 0; i < array.length; i++) {
   	console.log(i);
   	// callback(acc, array[i], i, array);
-  	var current = callback(acc, array[i], i, array);
-  	acc = current;
+  	acc = callback(acc, array[i], i , array);
+  	// PREVIOUS WORKING VAR
+  	// var current = callback(acc, array[i], i, array);
+  	// acc = current;
   }
   return acc;
 
-
+}
 
 // var sum = [0, 1, 2, 3].reduce(function(acc, val) { return acc + val;
 // }, 0);
@@ -56,7 +64,7 @@ for (var i = 0; i < array.length; i++) {
 // 	array) {
 // return accumulator + currentValue
 // }
-}
+
 
 /*
  Best if you don't code out here.
